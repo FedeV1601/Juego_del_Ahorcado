@@ -1,0 +1,25 @@
+body{
+
+    margin:0;
+  
+}
+
+#ahorcado{
+
+    height: 200px;
+    width: 149px;
+    background-image: url('../img/ahorcado.png');
+    
+}
+
+.tituloPrin{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 72px;
+ 
+}
+
+.tituloSec{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+}
