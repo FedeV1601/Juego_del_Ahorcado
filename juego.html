@@ -19,22 +19,41 @@
         <body>
             <div class="container">
                 <div class="row titulos py-5">
+                    
                     <h1 class="text-center tituloPrin animate__animated animate__backInDown">Juego del Ahorcado</h1>
                     <h3 class="text-center tituloSec animate__animated animate__backInLeft">Adiviná la palabra Secreta!!</h3>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 mx-auto py-4">
-                            <button class="btn boton" id="irAjuego">A jugar !!!!</button>
-                    </div>
-                </div>
-            </div>  
-                        
 
-         <script src="scripts.js"></script>
+                </div>
+
+                <div class="row ">   
+                    <div class="col-6 py-3 mb-5">
+                        <h5 class="text-center" id="cantLetras"></h5>
+                        <h2 class="text-center pb-2" id="output"></h2>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Ingrese una letra</span>
+                            <input type="text" class="form-control" id="letra" maxlength="1">
+                            <button class="btn btn-primary" id="jugar">Jugar!</button>
+                        </div>  
+                        <h2 class="text-center pb-2"  id="errada"></h2>
+
+                    </div>
+                    <div class="col-3" id="espacio"></div>
+                    <div class="col-3" id="ahorcado"></div>
+
+                </div>
+            </div>
+
+
+        <script src="scripts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     
+        <footer>
+
+
+        </footer>
       </body>
     </html>
-                
-  
+
+
+
   

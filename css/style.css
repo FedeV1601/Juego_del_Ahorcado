@@ -1,7 +1,6 @@
 body{
-
     margin:0;
-  
+ 
 }
 
 #ahorcado{
@@ -10,6 +9,12 @@ body{
     width: 149px;
     background-image: url('../img/ahorcado.png');
     
+}
+
+.titulos{
+
+    background-image: linear-gradient(to bottom, blue, white);
+
 }
 
 .tituloPrin{
@@ -22,4 +27,31 @@ body{
 
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
+}
+
+.pie{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;   /*background-image: linear-gradient(to bottom, white, rgb(121, 92, 155));*/
+}
+
+.container
+{
+
+    border:1px solid blue;
+    box-shadow: 5px 8px blue;
+}
+
+.boton{
+  /*   display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center; */
+    font-size: xx-large;
+    font-family: 'Londrina Solid', cursive;
+    width: 350px;
+    height: 150px;
+    background-color:greenyellow;
+    
+    border-color: darkgreen;
+    
 }
