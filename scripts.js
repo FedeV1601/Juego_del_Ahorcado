@@ -10,7 +10,9 @@ document.querySelector("#output").innerHTML = palabraConGuiones;
 document.querySelector("#cantLetras").innerHTML = "La Palabra tiene " + palabraSecreta.length + " letras";
 let erradas = [];
 
-
+function aJugar() {
+    window.location.href="juego.html";
+}
 
 document.querySelector("#jugar").addEventListener("click",()=> {
     
