@@ -1,51 +1,43 @@
 body{
     margin:0;
- 
+}
+
+.box{
+    border:1px solid blue;
+    box-shadow: 5px 8px blue;
+    min-height: 600px;
 }
 
 #hangMan{
-
     height: 200px;
     width: 149px;
     background-image: url('../img/ahorcado.png');
-    
 }
 
 .titles{
-
     background-image: linear-gradient(to bottom, blue, white);
-
 }
 
 .mainTitle{
     font-family: 'Londrina Solid', cursive;
     font-size: 72px;
- 
 }
 
 .secTitle{
-
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
 }
 
 .foot{
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;   /*background-image: linear-gradient(to bottom, white, rgb(121, 92, 155));*/
+    font-size: 18px; 
 }
 
-.container
-{
-
-    border:1px solid blue;
-    box-shadow: 5px 8px blue;
+.space{
+    min-height: 100px;
 }
-
 .boton{
-  /*   display: flex;
-    justify-content: center;
-    align-content: center;
-    text-align: center; */
+ 
     font-size: xx-large;
     font-family: 'Londrina Solid', cursive;
     width: 350px;
