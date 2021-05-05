@@ -18,18 +18,38 @@
   </head>
     <body>
         <div class="container">
-            <div class="row titulos py-5">
+          <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+              <a class="navbar-brand" onClick="index()">Home</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" onClick="index()">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onClick="letsPlay()">Juego</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onClick="credits()">Creditos</a>
+                  </li>
+             
+                </ul>
+                   </div>
+              </nav>
+          </div>
+            <div class="row titles py-5">
                 
-                <h1 class="text-center tituloPrin animate__animated animate__backInDown">Juego del Ahorcado</h1>
-                <h3 class="text-center tituloSec animate__animated animate__backInLeft">Carlos Federico Vazquez</h3>
+                <h1 class="text-center mainTitle animate__animated animate__backInDown">Juego del Ahorcado</h1>
+                <h3 class="text-center secTitle animate__animated animate__backInLeft">Carlos Federico Vazquez</h3>
+                <h4 class="text-center secTitle">Escuela Da Vinci </h4>
+                <h5 class="text-center secTitle">TP N° 1 Aplicaciones Móbiles</h5>
 
-                <button class="btn boton btn-primary" id="playAgain">Play Again!</button>
+
             </div>
-
-           
-            </div>  
-                    
-
+          </div>  
      <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 

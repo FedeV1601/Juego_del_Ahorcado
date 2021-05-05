@@ -1,50 +1,58 @@
 String.prototype.replaceAt=function(index, character) 
 { return this.substr(0, index) + character + this.substr(index+character.length); }
 
-const palabras=["murcielago", "casa","perro", "gato", "telefono", "felicitas", "Benjamin", "francisco", "pimpinela", "vehiculo", "silencio", "puerta", "ascensor" ];
-const palabraSecreta= palabras[Math.floor(Math.random()*palabras.length)];
-let palabraConGuiones =palabraSecreta.replace(/./g, "- ");
-let contadorFallos = 0;
+const words=["murcielago", "casa","perro", "gato", "telefono", "felicitas", "Benjamin", "francisco", "pimpinela", "vehiculo", "silencio", "puerta", "ascensor" ];
+const secretWord= words[Math.floor(Math.random()*words.length)];
+let hyphenatedWord =secretWord.replace(/./g, "- ");
+let faultsCounter = 0;
 
-document.querySelector("#output").innerHTML = palabraConGuiones;
-document.querySelector("#cantLetras").innerHTML = "La Palabra tiene " + palabraSecreta.length + " letras";
-let erradas = [];
+document.querySelector("#output").innerHTML = hyphenatedWord;
+document.querySelector("#amountOfLetters").innerHTML = "La Palabra tiene " + secretWord.length + " letras";
+let faults = [];
 
-function aJugar() {
-    window.location.href="juego.html";
+function letsPlay(){
+    window.location.href="game.html";
+}
+function index() {
+    window.location.href="index.html";
+}
+function credits() {
+    window.location.href="credits.html";
 }
 
-document.querySelector("#jugar").addEventListener("click",()=> {
+
+document.querySelector("#letsPlay").addEventListener("click",()=> {
     
-    const letra = document.querySelector("#letra").value;
+    const letter = document.querySelector("#letter").value;
     
-    let haFallado =true;
-    for(const i in palabraSecreta) //recorre el string como si fuera un array?
+    let failed =true;
+    for(const i in secretWord) //recorre el string como si fuera un array?
     {
-        if(letra == palabraSecreta[i])
+        if(letter == secretWord[i])
         {
-            palabraConGuiones = palabraConGuiones.replaceAt(i*2, letra);
-            haFallado= false;
+            hyphenatedWord = hyphenatedWord.replaceAt(i*2, letter);
+            failed= false;
         }
         
     }
     
-    if(haFallado)
+    if(failed)
     {
-        contadorFallos++;
+        faultsCounter++;
     
-        let letraMay = letra.toUpperCase();
-                erradas.push(" " + letraMay);
+        let letterMay = letter.toUpperCase();
+                faults.push(" " + letterMay);
        
-        document.querySelector("#errada").innerHTML = "Fallaste " + contadorFallos + " letras " + erradas;
+        document.querySelector("#fault").innerHTML = "Fallaste " + faultsCounter + " letras " + faults;
 
 
-        document.querySelector("#ahorcado").style.backgroundPosition = -(150*contadorFallos) + 'px 0';
-        if(contadorFallos==6)
+        document.querySelector("#hangMan").style.backgroundPosition = -(150*faultsCounter) + 'px 0';
+        if(faultsCounter==6)
         {
-            var resultado = window.confirm('Perdiste!!!! Queres jugar de nuevo?');
-            if (resultado === true) {
-                setTimeout(reset, 1000);
+          
+            var result = window.confirm('Perdiste!!!! Queres jugar de nuevo?');
+            if (result === true) {
+              setTimeout(reset, 1000);
                 function reset(){document.location.reload();}
             } 
             else{
@@ -54,10 +62,10 @@ document.querySelector("#jugar").addEventListener("click",()=> {
         }
     }else{
 
-        if(palabraConGuiones.indexOf("-")<0)
+        if(hyphenatedWord.indexOf("-")<0)
         {
-            var resultado = window.confirm('Ganaste !!!! Queres jugar de nuevo?');
-                if (resultado === true) {
+            var result = window.confirm('Ganaste !!!! Queres jugar de nuevo?');
+                if (result === true) {
                     setTimeout(reset, 1000);
                     function reset(){document.location.reload();}
                 }   else{
@@ -71,10 +79,10 @@ document.querySelector("#jugar").addEventListener("click",()=> {
 
     }
  
-    document.querySelector("#cantLetras").innerHTML = "La palabra tiene " + palabraSecreta.length + " letras";
-    document.querySelector("#output").innerHTML = palabraConGuiones;
-    document.querySelector("#letra").value="";
-    document.querySelector("#letra").focus();
+    document.querySelector("#amountOfLetters").innerHTML = "La palabra tiene " + secretWord.length + " letras";
+    document.querySelector("#output").innerHTML = hyphenatedWord;
+    document.querySelector("#letter").value="";
+    document.querySelector("#letter").focus();
 
 });
 

@@ -3,7 +3,7 @@ body{
  
 }
 
-#ahorcado{
+#hangMan{
 
     height: 200px;
     width: 149px;
@@ -11,25 +11,25 @@ body{
     
 }
 
-.titulos{
+.titles{
 
     background-image: linear-gradient(to bottom, blue, white);
 
 }
 
-.tituloPrin{
+.mainTitle{
     font-family: 'Londrina Solid', cursive;
     font-size: 72px;
  
 }
 
-.tituloSec{
+.secTitle{
 
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
 }
 
-.pie{
+.foot{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;   /*background-image: linear-gradient(to bottom, white, rgb(121, 92, 155));*/
 }
