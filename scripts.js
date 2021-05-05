@@ -28,14 +28,21 @@ document.querySelector("#letsPlay").addEventListener("click",()=> {
     const letter = document.querySelector("#letter").value;
     
     let failed =true;
-    for(const i in secretWord)
-    {
-        if(letter == secretWord[i])
+    if(letter == "" || isNaN(letter) == false){
+        window.alert("Tenes que ingresar una letra");
+        document.querySelector("#letter").value="";
+        letter = document.querySelector("#letter").value;
+    } else{ 
+        for(const i in secretWord)
         {
-            hyphenatedWord = hyphenatedWord.replaceAt(i*2, letter); // reemplazo las letras adivinadas por el usuario en la palabra secreta. El i*2 es porquie hay un espacio entre letra y letra
-            failed= false;
+            if(letter == secretWord[i])
+            {
+                hyphenatedWord = hyphenatedWord.replaceAt(i*2, letter); // reemplazo las letras adivinadas por el usuario en la palabra secreta. El i*2 es porquie hay un espacio entre letra y letra
+                failed= false;
+            }
         }
     }
+    
     
     if(failed)
     {

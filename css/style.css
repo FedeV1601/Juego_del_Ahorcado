@@ -2,6 +2,11 @@ body{
     margin:0;
 }
 
+ul li:hover{
+
+    background-color:greenyellow;
+}
+
 .box{
     border:1px solid blue;
     box-shadow: 5px 8px blue;
